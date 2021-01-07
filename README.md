@@ -1,6 +1,6 @@
-#API REST usando Spring Boot 2, Hibernate, JPA, e H2 com Deploy no Heroku.
+# API REST usando Spring Boot 2, Hibernate, JPA, e H2 com Deploy no Heroku.
 
-##O Problema que Queremos Resolver:
+## O Problema que Queremos Resolver:
 
 Precisamos implementar uma API REST que precisa suportar o processo de abertura de nova conta no banco. O primeiro passo desse fluxo é cadastrar os dados pessoais de uma
 pessoa. Precisamos de apenas algumas informações obrigatórias:
@@ -13,7 +13,7 @@ pessoa. Precisamos de apenas algumas informações obrigatórias:
 Caso os dados estejam corretos, é necessário gravar essas informações no banco de dados relacional e retornar o status adequado para a aplicação cliente, que pode ser uma página web ou um aplicativo mobile.
 A API devolverá a resposta adequada para o caso de falha de validação.
 
-##Tecnologias a Serem Utilizadas:
+## Tecnologias a Serem Utilizadas:
 
 As stacks principais serão Java, Spring e Hibernate e desdobrando-as usaremos:
 
@@ -24,12 +24,12 @@ As stacks principais serão Java, Spring e Hibernate e desdobrando-as usaremos:
 * Heroku para deploy na nuvem;
 * Intellij (IDE);
 
-##Quais classes serão criadas nesse processo?
+## Quais classes serão criadas nesse processo?
 
 Como o problema inicial é realizar o cadastro de pessoas e como estamos usando o paradigma de Orientação a Objetos (OO) com Java, precisamos representar as pessoas cadastradas através de uma classe, e seus atributos serão as propriedades que identificam essa pessoa, assim teremos a classe Person. Essa classe representa a tabela que será gerada no banco de dados. As demais classes e interfaces serão classes que darão suporte ao cadastro de pessoas e permitirão a dinâmica da arquitetura Rest no Spring, bem como a implementação de alguns padrões de desenvolvimento.
 ![classes](./assetGitHub/classes.png)
 
-##Qual foi o processo de decisão para realizar a implementação?
+## Qual foi o processo de decisão para realizar a implementação?
 
 O primeiro passo é entender o problema e em seguida verificar o que está sendo feito para resolver problemas semelhantes, neste caso, como nosso problema está bem delimitado fica mais fácil encontrar a solução, foi pedido uma API REST para o processo de cadastro, então é necessário entender o que é uma API REST (Representational State Transfer).
 Na arquitetura REST, descrita por Roy Fieldman em sua dissertação de doutorado, utilizamos o protocolo HTTP como forma de comunicação, assim clientes diferentes atingem os mesmos End Points, executam ações iguais e recebem as mesmas respostas. Esta é uma arquitetura madura e muito utilizada o que facilita a obtenção de informações. Neste padrão devemos mapear nossas operações necessárias ao cadastro e manipulação dos dados para verbos HTTP, e o framework Spring já é totalmente compatível com esta arquitetura o que facilita todo o processo de desenvolvimento. Desta forma seguiremos as recomendações da comunidade utilizando os recursos que o Spring nos oferece.
@@ -44,7 +44,7 @@ http://localhost:8080/api/v1/people
 
 Quero agradecer ao professor [Rodrigo Peleias](https://www.linkedin.com/in/rodrigopeleias/), pois suas aulas na Digital Innovation One servirão de base para essa implementação.
 
-Referências:
+## Referências:
 DTO: https://pt.stackoverflow.com/questions/31362/o-que-%C3%A9-um-dto
 H2: https://www.h2database.com/html/main.html
 Hibernate: https://www.caelum.com.br/apostila-java-web/uma-introducao-pratica-ao-jpa-com-hibernate
