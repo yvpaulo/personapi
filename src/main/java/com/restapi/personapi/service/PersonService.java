@@ -19,7 +19,7 @@ public class PersonService {
 
     private PersonRepository personRepository;
     private final PersonMapper personMapper = PersonMapper.INSTANCE;
-    
+
     public MessageResponseDTO createPerson(PersonDTO personDTO){
             Person personToSave = personMapper.toModel(personDTO);
             Person savedPerson = personRepository.save(personToSave);
